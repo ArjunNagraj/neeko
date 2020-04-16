@@ -211,6 +211,7 @@ class _NeekoPlayerWidgetState extends State<NeekoPlayerWidget> {
         playerOptions: NeekoPlayerOptions(
             enableDragSeek: widget.playerOptions.enableDragSeek,
             showFullScreenButton: widget.playerOptions.showFullScreenButton,
+            showBackOption:widget.playerOptions.showBackOption,
             autoPlay: true,
             useController: widget.playerOptions.useController,
             isLive: widget.playerOptions.isLive,
@@ -281,7 +282,7 @@ class _NeekoPlayerWidgetState extends State<NeekoPlayerWidget> {
                         ),
                   ),
                 ),
-              if (widget.playerOptions.useController)
+              if (widget.playerOptions.useController && widget.playerOptions.showBackOption)
                 Positioned(
                     left: 0,
                     right: 0,
