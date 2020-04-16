@@ -304,6 +304,7 @@ class TopBar extends StatefulWidget {
   final Function onLandscapeBackTap;
 
   final bool isFullscreen;
+  final bool isShowTopBarBackOption;
 
   const TopBar(this.controllerWrapper,
       {Key key,
@@ -313,6 +314,7 @@ class TopBar extends StatefulWidget {
       this.options,
       this.onPortraitBackTap,
       this.onLandscapeBackTap,
+      this.isShowTopBarBackOption,
       this.isFullscreen = false})
       : super(key: key);
 
@@ -369,7 +371,7 @@ class _TopBarState extends State<TopBar> {
     final IconData back =
         Platform.isIOS ? Icons.arrow_back_ios : Icons.arrow_back;
 
-    return Align(
+    return isShowTopBarBackOption ? Align(
       alignment: Alignment.centerLeft,
       child: FlatButton.icon(
           onPressed: () {
@@ -392,7 +394,7 @@ class _TopBarState extends State<TopBar> {
             style: TextStyle(
                 color: Colors.white, fontSize: widget.isFullscreen ? 16 : 14),
           )),
-    );
+    ) : Container();
   }
 }
 

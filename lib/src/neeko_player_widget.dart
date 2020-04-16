@@ -283,7 +283,6 @@ class _NeekoPlayerWidgetState extends State<NeekoPlayerWidget> {
                   ),
                 ),
               if (widget.playerOptions.useController)
-               if(widget.playerOptions.showBackOption)
                 Positioned(
                     left: 0,
                     right: 0,
@@ -294,6 +293,7 @@ class _NeekoPlayerWidgetState extends State<NeekoPlayerWidget> {
                       options: widget.playerOptions,
                       actions: widget.actions,
                       isFullscreen: false,
+                      isShowTopBarBackOption:widget.playerOptions.showBackOption,
                       onPortraitBackTap: widget.onPortraitBackTap,
                     )),
               if (widget.playerOptions.useController)
