@@ -282,7 +282,8 @@ class _NeekoPlayerWidgetState extends State<NeekoPlayerWidget> {
                         ),
                   ),
                 ),
-              if (widget.playerOptions.useController && widget.playerOptions.showBackOption)
+              if (widget.playerOptions.useController)
+               (widget.playerOptions.showBackOption)
                 Positioned(
                     left: 0,
                     right: 0,
