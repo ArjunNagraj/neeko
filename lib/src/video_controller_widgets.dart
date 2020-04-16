@@ -371,7 +371,7 @@ class _TopBarState extends State<TopBar> {
     final IconData back =
         Platform.isIOS ? Icons.arrow_back_ios : Icons.arrow_back;
 
-    return isShowTopBarBackOption ? Align(
+    return widget.isShowTopBarBackOption ? Align(
       alignment: Alignment.centerLeft,
       child: FlatButton.icon(
           onPressed: () {
